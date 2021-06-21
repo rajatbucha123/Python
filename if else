@@ -1,0 +1,100 @@
+Q = 1) Write a Python program to find those numbers which are divisible by 7 and multiple of 5, between 1500 and 2700 (both included). 
+
+a=[]
+
+for i in range(1500,2700):
+    if(i % 7 == 0) and ( i % 5 == 0):
+        a.append(i)
+
+print(a)
+
+Q=2) Python Program to Check if a Number is Positive, Negative or 0
+
+num = int(input("Enter the numer"))
+
+if num > 0:
+    print("It is positive number")
+elif num == 0:
+    print("it is zero")
+else:
+    print("it is negative number")
+    
+ Q= 3) Python Program to Check if a Number is Odd or Even
+ 
+ num = int(input("Enter the number "))
+
+if num% 2 == 0:
+    print("it is even number")
+else:
+    print("it is odd number")
+    
+Q = 4)  Python Program to Check Leap Year
+
+year = int(input("Enter the number "))
+
+if(year%4)== 0:
+    if(year% 100)==0:
+        if(year%400)== 0:
+            print("it is leap year",format(year))
+        else:
+            print("it is not leap year",format(year))
+    else:
+        print("it is leap year",format(year))
+else:
+    print("it is not leap year",format(year))
+    
+Q= 5) Python Program to Find the Largest Among Three Numbers
+
+num1 = int(input("Enter the first number "))
+num2 = int(input("Enter the second number "))
+num3 = int(input("Enter the third number"))
+
+if num1 >= num2 and num1 >= num3 :
+    print("it is greater than num1")
+elif num2 >= num3 and num2 >= num1 :
+    print("it is greater than num2")
+elif num3 >= num1 and num3 >= num2:
+    print("it is greater than num3 ")
+else:
+    print("all are equal")
+Q= 6) Using following list of cities per country,
+india = ["mumbai", "banglore", "chennai", "delhi"]
+pakistan = ["lahore","karachi","islamabad"]
+bangladesh = ["dhaka", "khulna", "rangpur"]
+Write a program that asks user to enter a city name and it should tell which country the city belongs to
+Write a program that asks user to enter two cities and it tells you if they both are in same country or not.
+For example if I enter mumbai and chennai, it will print "Both cities are in India" but if I enter mumbai and dhaka it should print "They don't belong to same country".
+
+
+i) india = ["mumbai", "banglore", "chennai", "delhi"]
+pakistan = ["lahore","karachi","islamabad"]
+bangladesh = ["dhaka", "khulna", "rangpur"]
+
+country = input("Enter the number:\n")
+
+if country in india:
+    print(f"{country} is a Indian")
+elif country in pakistan:
+    print(f"{country} is a Pakistani")
+elif country in bangladesh:
+    print(f"{country} is a bangladesi")
+else:
+    print("Based on limitled knowledge")
+
+ii) india = ["mumbai", "banglore", "chennai", "delhi"]
+pakistan = ["lahore","karachi","islamabad"]
+bangladesh = ["dhaka", "khulna", "rangpur"]
+
+country1 = input("Enter the city 1:\n")
+country2 = input("Enter the city 2:\n")
+
+if country1 in india and country2 in india:
+    print("Both city in india")
+elif country1 in pakistan and country2 in pakistan:
+    print("Both city in pakistan")
+elif country1 in bangladesh and country2 in bangladesh:
+    print("both city in bangladesh")
+else:
+    print("They don`t belong same country")
+
+
