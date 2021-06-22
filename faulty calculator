@@ -1,0 +1,42 @@
+#function to add two number
+def add(num1,num2):
+    return num1+num2
+#function to add two number
+def subtract(num1,num2):
+    return num1-num2
+#function to add two number
+def multiply(num1,num2):
+    return num1*num2
+#function to add two number
+def divide(num1,num2):
+    return num1/num2
+print("1.Add\n2.subtract\n3.multiply\n4.divide\n5.exit")
+s = int(input("Select operator 1,2,3,4,5\n"))
+if s == "5":
+    exit()
+print("Enter the first value")
+num1 = int(input())
+print("Enter Second value")
+num2 = int(input())
+
+if num1 == 45and num2==3 and s == 3:
+    print("555")
+elif num1 == 56 and num2 == 9 and s == 1:
+    print("77")
+elif num1 == 56 and num2 == 6 and s == 4:
+    print("4")
+elif s == 1:
+    s=num1 + num2
+    print(s)
+elif s == 2:
+    s=num1 - num2
+    print(s)
+elif s == 3:
+    s=num1 * num2
+    print(s)
+elif s == 4:
+    s=num1 / num2
+    print(s)
+else:
+    print("invlid choice")
+
