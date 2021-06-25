@@ -1,0 +1,67 @@
+1)  def find_total(exp):
+    total = 0
+    for item in exp:
+        total += item
+    return total
+
+bharat_expenses = [20,30,45]
+bharat_total = find_total(bharat_expenses)
+
+bilal_expenses = [45,67,34]
+bilal_total = find_total(bilal_expenses)
+
+print(bharat_total)
+print(bilal_total)
+
+
+2)  def cylinder_volume(radius,height):
+    print("radius:",radius)
+    print("height:",height)
+    volume = 3.14*(radius**2)*height
+    return volume
+
+r =5
+h = 10
+print(cylinder_volume(r,h))
+
+3)  Write a function called calculate_area that takes base and height as an input and returns and area of a triangle. Equation of an area of a triangle is,
+area = (1/2)*base*height
+
+Ans def calculate_area(base,height):
+    print("base:",base)
+    print("height:",height)
+    area = 1/2 * base * height
+    return area
+b = 5
+h = 6
+
+print(calculate_area(b,h))
+
+4) Modify above function to take third parameter shape type. It can be either "triangle" or "rectangle". 
+Based on shape type it will calculate area. Equation of rectangle's area is,
+rectangle area=length*width
+
+
+def calculate_area(dimension1,dimension2,shape="triangle"):
+    if shape == "triangle":
+        area = 1/2*(dimension1*dimension2)
+    elif shape == "rectangle":
+        area = dimension1*dimension2
+    else:
+        print("Error: Input shape is neither rectangle or triangle")
+        area = None
+    return area
+
+base = 10
+height = 5
+
+triangle_area = calculate_area(base,height,"triangle")
+print("Area of triangle",triangle_area)
+
+length = 20
+width = 30
+
+rectangle_area = calculate_area(length,width,"rectangle")
+
+5) 
+print("Area of rectangle",rectangle_area)
