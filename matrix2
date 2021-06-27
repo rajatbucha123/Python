@@ -1,0 +1,79 @@
+Adding two numbers in matrix
+
+Ans  mata = [[1, 0, 1],
+[4, 5, 6],
+[1, 2, 3]]
+
+matb = [[1, 1, 1],
+     [2, 3, 1],
+    [1, 5, 1]]
+
+rows = len(mata)
+cols = len(mata[0])
+
+sum = [[0]*rows for i in range(cols)]
+
+for i in range(0,rows):
+    for j in range(0,cols):
+        sum[i][j] = mata[i][j] + matb[i][j]
+
+print("Adding of two number")
+
+for i in range(0,rows):
+    for j in range(0,cols):
+        print(sum[i][j])
+    print("\n")
+
+Program to determine whether a given matrix is an identity matrix
+
+a = [
+        [1, 0, 0],
+        [0, 1, 0],
+        [0, 0, 1]
+    ]
+
+flag = True
+
+row = len(a)
+cols = len(a[0])
+
+if(row != cols):
+    print("Matrix should be a square matrix")
+
+else:
+    for i in range(0,row):
+        for j in range(0,cols):
+            if(i == j and a[i][j] != 0):
+                flag = False
+                break
+
+if(flag):
+    print("Given matrix is a identity matrix")
+else:
+    print("Given matrix is not an identity matrix")
+    
+Program to determine whether a given matrix is a sparse matrix
+
+a = [
+        [4, 0, 0],
+        [0, 5, 0],
+        [0, 0, 6]
+    ]
+
+count = 0
+
+row = len(a)
+cols = len(a[0])
+
+size = row*cols
+
+for i in range(0,row):
+    for j in range(0,cols):
+        if(a[i][j] == 0):
+            count = count+1
+if(count > (size/2)):
+    print("Given matrix is a sparse matrix")
+else:
+    print("Given matrix is not a spare matrix")
+
+
