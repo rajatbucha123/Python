@@ -1,0 +1,90 @@
+1) def add_numbers(n1,n2):
+    result = n1 + n2
+    return result
+
+output = add_numbers(2,5)
+print(output)
+
+#global variable
+
+2) message = "How are you?"
+
+def greet():
+    global message
+    message = "How you doing"
+    print("Message inside the function",message)
+
+greet()
+print("Message outside the function",message)
+
+# variable defined inside function is called local variable
+# variable defined outside function is called global variable
+
+3)def funct():
+    x = 10
+    print("Value inside the function",x)
+
+x = 20
+funct()
+print("Value outside the function",x)
+
+# Argument
+
+4) def greet(name, msg):
+    print("Hello," +name+","+msg)
+
+greet("monica","Good morning!")
+
+
+# Variable function argument
+5) def greet(name,msg="Good morning!"):
+
+    print("Hello " +name+","+msg)
+
+greet("kate")
+greet("Bruce","How are you")
+
+#
+def greet(*names):
+
+    for name in names:
+        print("Hello", name)
+
+greet("Monica", "Rajat", "saurabh", "Steven")
+
+
+
+#Recursion function
+
+6) def factorial(x):
+     if x == 1:
+         return  1
+     else:
+         return(x *factorial(x-1))
+
+num = 3
+print("The factorial is",num,"is",factorial(num))
+
+# filter
+7) my_list = [1,5,4,6,8,11,3,12]
+
+new_list = list(filter(lambda x:(x%2 == 0), my_list))
+
+print(new_list)
+
+# MAP
+8) new_list = [1,5,4,6,8,11,3,12]
+
+my_list = list(map(lambda x : x * 2, new_list))
+
+print(my_list)
+
+#GLOBAL VARIABLE
+
+9) x = "global"
+
+def foo():
+    print("x inside:",x)
+
+foo()
+print("x outside:",x)
