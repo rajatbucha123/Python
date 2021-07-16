@@ -1,0 +1,48 @@
+# Take input of what nominee what we want to keep
+nominee1 = input("Enter the name of first nominee:\n")
+nominee2 = input("Enter the name of second nominee:\n")
+
+# Initially Vote count for both must be zero
+nominee1 = 0
+nominee2 = 0
+
+voter_id = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+no_of_vote = len(voter_id)
+
+while True:
+    if voter_id == []: # to check when voter list completed
+        print("Voting session is over")
+        if nominee1 > nominee2:
+            percent = (nominee1/no_of_vote)*100
+            print(f"{nominee1} Won the election",percent,"% of votes")
+            break
+        elif nominee2 > nominee1:
+            percent = (nominee1 / no_of_vote) * 100
+            print(f"{nominee2} Won the election",percent,"% of votes")
+            break
+        else:
+            print(f"Both{nominee1} and {nominee2} are equal vote. Now Government decide who Rule")
+            break
+
+    voter = int(input("Enter the voter id:"))
+    if voter in voter_id:
+        print("You are a voter")
+        voter_id.remove(voter) # We will remove so that again same vote can`t give again
+        print("------------------------------------")
+        print("To give vote to", nominee1, "Press 1")
+        print("To give vote to", nominee2, "Press 2")
+        print("------------------------------------")
+        print("Enter the vote")
+        if voter == 1:
+            nominee1 += 1
+            print("Thanks you to give your important vote for them ")
+        elif voter == 2:
+            nominee2 += 1
+            print("Thanks you to give your important vote for them")
+        elif voter > 2:
+            print("Check you pressed key")
+        else:
+            print("You are not a voter or You have already vote")
+
+
