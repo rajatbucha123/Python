@@ -1,0 +1,12 @@
+sum = 0
+print("Welcome to Pandya store")
+while True:
+    number = input("Enter the price of product or press the q for exit\n:")
+    if number != 'q':
+        sum = sum + int(number)
+        print(f"Order total so far:{sum}")
+
+    else:
+        print(f"Your bill total is {sum}.")
+        break
+print("Thankyou for shopping our shop.")
